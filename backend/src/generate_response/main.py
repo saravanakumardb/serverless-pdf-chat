@@ -35,7 +35,7 @@ def lambda_handler(event, context):
     )
 
     embeddings, llm = BedrockEmbeddings(
-        model_id="amazon.titan-embed-text-v1",
+        model_id="ai21.j2-ultra-v1",
         client=bedrock_runtime,
         region_name="us-west-2",
     ), Bedrock(
