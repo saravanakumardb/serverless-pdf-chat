@@ -35,11 +35,11 @@ def lambda_handler(event, context):
     )
 
     embeddings, llm = BedrockEmbeddings(
-        model_id="ai21.j2-ultra-v1",
+        model_id="amazon.titan-embed-text-v1",
         client=bedrock_runtime,
         region_name="us-west-2",
     ), Bedrock(
-        model_id="ai21.j2-ultra-v1", client=bedrock_runtime, region_name="us-west-2"
+        model_id="amazon.titan-text-agile-v1", client=bedrock_runtime, region_name="us-west-2"
     )
     faiss_index = FAISS.load_local("/tmp", embeddings)
 
