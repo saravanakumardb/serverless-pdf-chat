@@ -39,7 +39,7 @@ def lambda_handler(event, context):
         client=bedrock_runtime,
         region_name="us-west-2",
     ), Bedrock(
-        model_id="amazon.titan-text-agile-v1", client=bedrock_runtime, region_name="us-west-2"
+        model_id="anthropic.claude-v2", client=bedrock_runtime, region_name="us-west-2"
     )
     faiss_index = FAISS.load_local("/tmp", embeddings)
 
